@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #22254b;
+  color: white;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.movie {
+  background-color: #373b69;
+  border-radius: 5px;
+  box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  margin: 1rem;
+  position: relative;
+}
+.root {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  justify-content: flex-end;
+  padding: 1rem;
+  background-color: #373b69;
+}
+.movie img {
+  max-width: 100%;
+}
+.search::placeholder {
+  color: white;
+}
+
+.search:focus {
+  outline: none;
+}
+.search {
+  background-color: transparent;
+  border: 2px solid #22254b;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1.3rem;
+  padding: 0.5rem 1.5rem;
+  color: white;
+}
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.movie-info h3 {
+  margin: 0;
+}
+
+.movie-over {
+  background-color: white;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  padding: 1rem;
+  color: #22254b;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  transition: all 1s ease;
+  overflow: auto;
+  max-height: 100%;
+}
+
+.movie:hover .movie-over {
+  transform: translateY(0%);
+}
+
+.info-btn {
+  padding: 5px 10px;
+  font-size: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: lightgrey;
+  transform: translateY(0%);
+  transition: all 0.8s ease-in-out;
+}
+
+.info-btn:hover {
+  background-color: orange;
+  color: white;
+  font-size: 16px;
+  transform: translateY(-15%);
+  transition: all 0.8s ease-in-out;
+}
+
+.fas {
+  font-size: 25px;
+  margin-left: 1rem;
+  cursor: pointer;
+  transform: rotate(90deg);
+  transition: all 1s ease-in-out;
+}
+
+.fas:hover {
+  transform: rotate(360deg);
+  transition: all 1s ease-in-out;
+  color: orange;
+}
+@media only screen and (max-width: 700px) {
+  .movie {
+    display: block;
+    margin: 20px auto;
+  }
+}
