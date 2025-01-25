@@ -98,7 +98,7 @@ function App() {
     setQuestion(questionCount + 1);
       setResult(questionCount > 2);
 
-    if (item.isCorrect === true) {
+    if (item.isCorrect ) {
       setScore(score + 1);
     }
     setQuiz(currentQuiz + 1);
