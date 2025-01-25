@@ -96,9 +96,7 @@ function App() {
 
   function handleClick(item) {
     setQuestion(questionCount + 1);
-    if (questionCount > 2) {
-      setResult(true);
-    }
+      setResult(questionCount > 2);
 
     if (item.isCorrect === true) {
       setScore(score + 1);
